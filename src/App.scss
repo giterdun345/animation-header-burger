@@ -46,13 +46,154 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+p{
+  font-size:1vw;
+}
+
+.img{
+  grid-area:homeImage;
+  width:105vw;
+  background-color:blue;
+  overflow:hidden;
+}
+
+.icon{
+  // display: inline-block;
+  // background: #3f3f3f;
+  border-radius: 20px;
+  background-size: 400px;
+  // color: rgb(123, 197, 231);
+
+}
+
+h1{
+  text-align: center;
+  background-color: #1f1e1e;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: rgba(255, 255, 255, 0.5) 0px 3px 3px;
+}
+
+.services-a{
+  width:18%;
+  background-color: darkgoldenrod;
+  text-align: center;
+}
+
+.services-b{
+  grid-area:science;
+  width:18%;
+  background-color:yellow;
+  text-align: center;
+
+}
+
+.services-c{
+  grid-area:analytics;
+  width:18%;
+  background-color:orangered;
+  text-align: center;
+
+}
+
+.services-d{
+  grid-area:engineering;
+  width:18%;
+  background-color:yellowgreen;
+  text-align: center;
+
+}
+
+.services-e{
+  grid-area:nlp;
+  width:18%;
+  background-color:lightcoral;
+  text-align: center;
+
+}
+
+.choice{
+  grid-area:why;
+  // background-color:blue;
+}
+
+.choice-a{
+  grid-area:choice1;
+  width:18%;
+  background-color:blueviolet
+
+}
+
+.choice-b{
+  grid-area:choice2;
+  width:18%;
+
+  background-color:lightblue
+
+}
+
+.choice-c{
+  grid-area:choice3;
+  width:18%;
+
+  background-color:lightskyblue
+
+}
+
+.choice-d{
+  grid-area:choice4;
+  width:18%;
+
+  background-color:turquoise
+
+}
+
+.choice-e{
+  grid-area:choice5;
+  width:18%;
+
+  background-color: cornflowerblue
+
+}
+
+.footer{
+  grid-area:legos;
+  width:100%;
+  background-color:green;
+}
+
+.services-parent{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display:flex;
+    flex-wrap: wrap;  
+    justify-content:space-evenly;
+
+}
+
+.choice-parent{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display:flex;
+    flex-wrap: wrap;
+    flex-flow:row wrap;
+    justify-content:space-evenly;
+    
+}
+
 /*********************************************************************************/
 /* WORDCLOUD TOOLTIP                                                                */
 /*********************************************************************************/
 // IMAGE 
 .combo{
  position:relative;
- top: 0;
+ top: 0; 
  left:0;
 }
 
@@ -83,12 +224,14 @@ body {
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  z-index: 1;
+  z-index: 25;
+  
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
+  margin-left:8vw;
 }
 
 /*********************************************************************************/
@@ -101,6 +244,11 @@ body {
   
 }
 
+dialog{
+margin-left:8vw;
+margin-top:8vw;
+}
+
 .title{
   grid-area: title;
   z-index:50;
@@ -111,7 +259,7 @@ body {
   color: $black;
   margin-top:15px;
   white-space: nowrap;
-  
+
   a{
     text-decoration: none;
   }
@@ -343,12 +491,6 @@ body {
 
 }
 
-// .home-image{
-//   margin: 0;
-//   padding: 0;
-//   width:100vw !important;
-//   // width:100%;
-// }
 
 // @media screen and (max-width: 536px) {
 //   .landingImage {
@@ -382,37 +524,9 @@ body {
 //   grid-area: homeHeader;
 // }
 
-.img{
-  grid-area:homeImage;
-}
 
-.services{
-  grid-area:do4u;
-}
 
-.services-a{
-  grid-area:software;
-}
 
-.services-b{
-  grid-area:science;
-}
-
-.services-c{
-  grid-area:analytics;
-}
-
-.services-d{
-  grid-area:engineering;
-}
-
-.services-e{
-  grid-area:nlp;
-}
-
-.services-f{
-  grid-area:cv;
-}
 
 .ychoose{
   grid-area:chooseme
