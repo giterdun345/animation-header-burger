@@ -1,0 +1,413 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,800&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+$blue: rgb(123, 197, 231);
+$black: #191919;
+$bgColor:rgb(123, 197, 231);
+$txtColor:rgb(246, 246, 246);
+$shadow:hsla(210, 40%, 52%, .4);
+
+/*********************************************************************************/
+/* Scroll                                                                        */
+/*********************************************************************************/
+/* width */
+::-webkit-scrollbar {
+  width: 40px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a7a7a7; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $bgColor; 
+}
+
+/*********************************************************************************/
+/* HTML BODY MAINPAGE                                                                       */
+/*********************************************************************************/
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/*********************************************************************************/
+/* WORDCLOUD TOOLTIP                                                                */
+/*********************************************************************************/
+// IMAGE 
+.combo{
+ position:relative;
+ top: 0;
+ left:0;
+}
+
+.marker{
+  position:absolute;
+    top:0;
+    left:0;
+    z-index:50;
+}
+
+.small{
+  width:35px;
+  border-radius: 60%;
+  position:absolute;
+  top: 22px;
+  left:30px;
+  z-index:100;
+}
+
+// TOOLTIP
+.tooltip {
+  position:absolute;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: rgb(136, 135, 135);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+/*********************************************************************************/
+/* HEADER MAIN PAGE                                                              */
+/*********************************************************************************/
+.duo{
+  grid-area: duo;
+  justify-self: center;
+  align-self: center;
+  
+}
+
+.title{
+  grid-area: title;
+  z-index:50;
+  justify-self: self-start;
+  align-self: center;
+  font-family: 'Homemade Apple', cursive;
+  font-size:4vw;
+  color: $black;
+  margin-top:15px;
+  a{
+    text-decoration: none;
+  }
+  a:visited{
+    color:black;
+  }
+  span{
+    font-size:3vw;
+    font-family: 'Just Me Again Down Here', cursive;
+  }
+
+  @media (max-width: 800px) {
+    span{
+      font-family: 'Just Me Again Down Here', cursive;
+      font-size:1.5vw;
+      display: block
+    }
+    
+  }
+}
+
+.clicker{
+  grid-area: clicker;
+  justify-self: center;
+  align-self: center;
+  
+  button {
+    position:relative;
+    padding: 10px 20px; 
+    border: none;
+    background: none;
+    cursor: pointer;  
+    font-family: "Source Code Pro";
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 30px;  
+    color: $txtColor;
+    background-color: $bgColor;
+    box-shadow: $shadow 2px 2px 22px;
+    border-radius: 4px; 
+    outline:none;
+    overflow: hidden;   
+  }
+  /* bubbles */
+  button::before {
+    content: '';
+    pointer-events: none;
+    opacity: .6;
+    background:
+      radial-gradient(circle at 20% 35%,  transparent 0,  transparent 2px, $txtColor 3px, $txtColor 4px, transparent 4px),
+      radial-gradient(circle at 75% 44%, transparent 0,  transparent 2px, $txtColor 3px, $txtColor 4px, transparent 4px),
+      radial-gradient(circle at 46% 52%, transparent 0, transparent 4px, $txtColor 5px, $txtColor 6px, transparent 6px),
+      radial-gradient(circle at 64% 85%, transparent 0, transparent 3px, $txtColor 4px, $txtColor 5px, transparent 5px),
+      radial-gradient(circle at 54% 64%, transparent 0, transparent 2px, $txtColor 4px, $txtColor 3px, transparent 5px),
+      radial-gradient(circle at 72% 75%, transparent 0, transparent 3px, $txtColor 3px, $txtColor 2px, transparent 4px);
+    width: 100%;
+    height: 300%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: bubbles 5s linear infinite both;
+  }
+  @keyframes bubbles {
+    from {transform: translate();}
+    to {transform: translate(0, -66.666%);}
+  }           
+}
+
+.headcontainer{
+  width:100vw;
+  display:grid;
+  grid-template-columns: 120px auto 15%;
+  grid-auto-rows: minmax(1fr auto);
+  grid-template-areas: "duo title clicker";
+  gap: 0 10px;
+}
+
+/*********************************************************************************/
+/* HAMBURGER MENU MAINPAGE                                                       */
+/*********************************************************************************/
+
+.hamburger-menu {
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+
+  .menu-secondary-background-color {
+    background: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100;
+    position: fixed;
+    z-index: -1;
+  }
+
+  .menu-layer {
+    position: relative;
+    background: $blue;
+    overflow: hidden;
+
+    .menu-city-background {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      opacity: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      // animation-name: backgroundEffect;
+      // animation-duration: 30s;
+      // animation-iteration-count: infinite;
+    }
+
+    .wrapper {
+      display: grid;
+      position: relative;
+      margin-left: 40px;
+
+      .menu-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+
+        nav {
+          display: block;
+
+          ul {
+            margin: 0;
+            padding: 0;
+            margin-top:125px;
+
+            li {
+              list-style: none;
+              font-size: 8vw;
+              font-weight: 700;
+              cursor: pointer;
+              height:11vw;
+              overflow: hidden;
+              position: relative;
+              width: 700px;
+
+              a {
+                position: absolute;
+                color: #fff;
+                text-decoration: none;
+
+                &:hover {
+                  color: $black;
+                }
+              }
+            }
+          }
+        }
+
+        .egg-wrapper{
+            margin-left: 55vw;
+            position:absolute;
+            margin-top:100px;
+
+          .egg{
+            border-radius:50%;
+            height:28vw; 
+          }
+        }
+
+  
+      }
+      .locations {
+        position: absolute;
+        bottom: -40px;
+        color: #fff;
+        font-size: 2vw;
+        font-weight: 600;
+        span {
+          cursor: pointer;
+            &:first-child {
+              margin-left: 20pxpx;
+            }
+          font-weight: 400;
+          margin: 0 20px;
+          transition: 1.2s ease-in-out;
+          &:hover {
+            color: #fff;
+            background: $black;
+            padding: 8px 24px;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes backgroundEffect {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 40% 10%;
+  }
+  50% {
+    background-position: 0 10%;
+  }
+  75% {
+    background-position: 10% 40%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+/*********************************************************************************/
+/* IMAGE MAINPAGE                                                                       */
+/*********************************************************************************/
+.landingImage{
+  // height:360px;
+// height:auto;
+  // overflow:hidden;
+  // width:50vw;
+
+
+}
+
+// @media screen and (max-width: 1200px) {
+//   .landingImage {
+//        width: 1200px;
+//   }
+// }
+
+// @media screen and (max-width: 900px) {
+//   .landingImage {
+//        width: 900px;
+//   }
+// }
+
+// @media screen and (max-width: 725px) {
+//   .landingImage {
+//        width: 100%;
+//   }
+// }
+
+// @media screen and (max-width: 460px) {
+//   .landingImage {
+//        width: 100%;
+//   }
+// }
+
+
+
+
+
+// .nav{
+//   grid-area: homeHeader;
+// }
+
+.img{
+  grid-area:homeImage;
+}
+
+.services{
+  grid-area:do4u;
+}
+
+.services-a{
+  grid-area:software;
+}
+
+.services-b{
+  grid-area:science;
+}
+
+.services-c{
+  grid-area:analytics;
+}
+
+.services-d{
+  grid-area:engineering;
+}
+
+.services-e{
+  grid-area:nlp;
+}
+
+.services-f{
+  grid-area:cv;
+}
+
+.ychoose{
+  grid-area:chooseme
+}
+
+.footer{
+  grid-area: legos;
+}
