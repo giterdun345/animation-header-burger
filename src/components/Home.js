@@ -9,8 +9,10 @@ import chalk7 from '../images/chalk7.jpg'
 import chalk8 from '../images/chalk8.jpg'
 const Home = () => {
     return(
-        <div style={{backgroundColor:"red", height:"15%"}} >
-            {/* <img src={chalk6}/> */}
+        <div>
+            <div className="img-wrapper">
+                {/* <img src={chalk6} className="home-image"/> */}
+            </div>
             {/* <div style={{backgroundColor:"#d2d2d2", height:"250px"}}> */}
                 {/* <div className="wrapper home">  */}
                 {/* <h3 style={{textAlign:"center", fontWeight:"700"}}> What do I have to offer?</h3> */}
@@ -59,8 +61,8 @@ const Home = () => {
                 <img src={chalk8} style={{backgroundColor:'red', height:"360px", width:'100%'}} />
 
             </div> */}
+            {/* </div> */}
         </div>
-    // </div>
     )
 }
 

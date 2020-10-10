@@ -35,7 +35,4 @@ function Contact() {
   return <p>Feel free to reach us.</p>;
 }
 
-// function Home() {
-//   return ()
-// }
 export default App;

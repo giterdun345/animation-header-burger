@@ -110,6 +110,8 @@ body {
   font-size:4vw;
   color: $black;
   margin-top:15px;
+  white-space: nowrap;
+  
   a{
     text-decoration: none;
   }
@@ -119,6 +121,7 @@ body {
   span{
     font-size:3vw;
     font-family: 'Just Me Again Down Here', cursive;
+    
   }
 
   @media (max-width: 800px) {
@@ -181,7 +184,7 @@ body {
 .headcontainer{
   width:100vw;
   display:grid;
-  grid-template-columns: 120px auto 15%;
+  grid-template-columns: 120px auto 20%;
   grid-auto-rows: minmax(1fr auto);
   grid-template-areas: "duo title clicker";
   gap: 0 10px;
@@ -329,20 +332,27 @@ body {
 }
 
 /*********************************************************************************/
-/* IMAGE MAINPAGE                                                                       */
+/* IMAGE MAINPAGE                                                                */
 /*********************************************************************************/
-.landingImage{
-  // height:360px;
-// height:auto;
-  // overflow:hidden;
-  // width:50vw;
 
+.image-wrapper{
+  width:100vw;
+  background-color:green;
+  height:200px;
+  width:100%;
 
 }
 
-// @media screen and (max-width: 1200px) {
+// .home-image{
+//   margin: 0;
+//   padding: 0;
+//   width:100vw !important;
+//   // width:100%;
+// }
+
+// @media screen and (max-width: 536px) {
 //   .landingImage {
-//        width: 1200px;
+//        width: 125%;
 //   }
 // }
 
