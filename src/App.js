@@ -1,7 +1,10 @@
 import React from "react";
 import "./App.scss";
-import Header from "./components/Header";
+import Header from "./components/header_parts/Header"
 import Home from './components/Home'
+import Engineering from './components/preview_skills/Engineering'
+import DataScience from './components/preview_skills/DataScience'
+import Automation from './components/preview_skills/Automation'
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -17,6 +20,9 @@ function App() {
                   <Route exact path="/opportunities" component={Opportunities} />
                   <Route exact path="/solutions" component={Solutions} />
                   <Route exact path="/contact-us" component={Contact} />
+                  <Route exact path="/software_engineering" component={Engineering} />
+                  <Route exact path="/datascience" component={DataScience} />
+                  <Route exact path="/automation" component={Automation} />
           </Switch>       
       </div>
     </Router>
