@@ -94,7 +94,8 @@ const Engineering= ()=>{
                              itemIMG={<img src="https://www.globaleducationideas.com/wp-content/uploads/2017/05/manymore-300x200.png" style={{height:"100px", width:"165px"}}/>}
                              item6={"logos:mongodb"}
                              item7={"vscode-icons:file-type-html"}
-                             item8={"logos:sass"}                
+                             item8={"logos:sass"}           
+                             item9= {"logos:es6"}    
                 />
         </div>
 
