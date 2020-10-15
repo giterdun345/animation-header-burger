@@ -2,9 +2,9 @@ import React from "react"
 import { withRouter, Link } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReact } from '@fortawesome/free-brands-svg-icons'
-import chalk6 from '../images/chalk6.jpg'
-import chalk7 from '../images/chalk7.jpg'
-import chalk8 from '../images/chalk8.jpg'
+import chalk6 from './images/chalk6.jpg'
+import chalk7 from './images/chalk7.jpg'
+import chalk8 from './images/chalk8.jpg'
 import { 
       faDatabase, 
       faLaptopCode,
@@ -59,7 +59,7 @@ const Home = () => {
                         Data analysis and application of sophisticated statistical models. All things data science &amp; big data              
                     </p>
             </div>
-            <div className="services-c">
+            {/* <div className="services-c">
                 <div>
                     <Link to="/automation" className="linked">
                         <FontAwesomeIcon icon={faRobot} size="4x" className="icon" />
@@ -69,7 +69,7 @@ const Home = () => {
                         </p>
                     </Link>
                 </div>
-            </div>
+            </div> */}
         </div>
          <div>
             <h1> Why should you hire me? </h1>

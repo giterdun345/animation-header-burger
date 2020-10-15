@@ -577,8 +577,70 @@ margin-top:8vw;
 
 
 /*********************************************************************************/
-/* SOFTWARE ENGINEERING PAGE                                                              */
+/* PARALAX PAGES                                                    */
 /*********************************************************************************/
+
+.offered{
+  height:45vw;
+  background-color:white;
+}
+
+.checklist{
+  list-style-type: none;
+  text-align:left;
+  line-height: 30px;
+  margin-right:30px
+}
+
+.neat{
+  margin: 0 30px 30px 30px;
+
+  a {
+    color: midnightblue;
+    position: relative;
+    text-decoration: none;
+    transition: color .4s ease-out;
+    font-size: 1em;
+    font-weight: 800;
+  }
+
+  a:before{
+    position: absolute;
+    content: attr(data-content);
+    color: midnightblue;
+    text-decoration: underline;
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+    transition: clip-path 275ms ease;
+  }
+
+  a:hover {
+    color: #457DFB;
+    right: 0;
+    text-decoration: none;
+  }
+
+  a:hover:after {
+    border-color: #457DFB;
+    right: 0;
+  }
+
+  a:after {
+    border-radius: 1em;
+    border-top: .1em solid #2F56B0;
+    content: "";
+    position: absolute;
+      right: 100%;
+      bottom: .14em;
+      left: 0;
+    transition: right .4s cubic-bezier(0,.5,0,1),
+                border-color .4s ease-out;
+  }
+
+  a:hover:after {
+  right: 0;
+  }
+}
+
 .container-parallax{
   max-width: 960px;
   margin: 0 auto;
@@ -589,31 +651,37 @@ margin-top:8vw;
 }
 
 .parallax-SE{
-  background:url('images/coffee_laptop.jpg') no-repeat center;
+  background:url('components/images/coffee_laptop.jpg') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
   height:500px
 }
 
-
-/*********************************************************************************/
-/* DATA SCIENCE PAGE                                                              */
-/*********************************************************************************/
 .parallax-DS{
-  background:url('images/laptop.jpg') no-repeat center;
+  background:url('components/images/laptop.jpg') no-repeat center;
   background-size: cover;
   background-attachment: fixed;
-  height:500px
+  height:200px
+}
+
+.parallax-AU{
+  background:url('components/images/silly_hands.jpg') no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  height:200px;
+
 }
 
 
-
-/*********************************************************************************/
-/* AUTOMATION PAGE                                                              */
-/*********************************************************************************/
-.parallax-AU{
-  background:url('images/silly_hands.jpg') no-repeat center;
-  background-size: cover;
-  background-attachment: fixed;
-  height:500px
+@media screen and (max-width: 1200px) {
+  .offered{
+    height:50%;
+    background-color:white;
+  }
+  .checklist{
+    list-style-type: none;
+    text-align:left;
+    line-height: 30px;
+    margin-right:30px
+  }
 }
