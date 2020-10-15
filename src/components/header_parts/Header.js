@@ -61,9 +61,9 @@ const Header = ({ history }) => {
     <header className="headcontainer">
         <div classname="duo" >
         <div style={{background: "green"}}>
-          <div className="tooltip">
+          <div className="mytooltip">
             <ImageModal />
-              <span className="tooltiptext">
+              <span className="mytooltiptext">
                 Click for wordcloud image
               </span>
           </div>

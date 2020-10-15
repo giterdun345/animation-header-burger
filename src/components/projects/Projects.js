@@ -1,63 +1,42 @@
-import React, {useState} from 'react'
-import { Tabs, Tab, Grid, Cell, Card, CardTitle,CardText,  CardActions, Button, Link, CardMenu, IconButton } from 'react-mdl'
-// import Nav from '../mainline/Nav'
-import DataAnalytics from './dataanalytics'
-import NLP from './nlp'
+import React, { useState } from 'react'
+import DataAnalytics from './DataAnalytics'
+import NLP from './NLP'
 import ML from './ML'
-import ComputerVision from './computervision'
-import ReactProj from './reactproj'
+import ComputerVision from './ComputerVision'
+import ReactProjects from './ReactProjects'
+
+import Tabs from 'react-bootstrap/Tabs'
+import Tab from 'react-bootstrap/Tab'
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const Projects= ()=>{
-    const [activeTab, setActiveTab]= useState(0)
+  const [activeTab, setActiveTab] = useState(0)
    
-const toggleCategories() => {
-    if (this.state.activeTab === 0){
-      return(
-        <DataAnalytics />
-      );
-    }
-    else if(this.state.activeTab === 1){
-      return(
-        <NLP />
-      );      
-    }
-    else if(this.state.activeTab === 2){
-      return(
-        <ML />
-      );
-    }
-    else if(this.state.activeTab === 3){
-      return(
-          <ComputerVision />
-      
-      );
-    }
-    else if(this.state.activeTab === 4){
-      return(
-        <ReactProj />
-      );
-    }
-  }
-
-render() {
   return (
-        <div>
-          <Tabs className = "tabs" activeTab={this.state.activeTab} onChange={(tabID) => this.setState({activeTab: tabID})} ripple>
-             <Tab style={{color:"black"}}>Data Analysis</Tab>
-             <Tab style={{color:"black"}}>NLP</Tab>
-             <Tab style={{color:"black"}}>Machine Learning</Tab>
-             <Tab style={{color:"black"}}>Computer Vision</Tab>
-             <Tab style={{color:"black"}}>React</Tab>
-          </Tabs>
-            <Grid>
-              <Cell col={12}>
-                <div>
-                  {this.toggleCategories()}
-                </div>
-              </Cell>
-            </Grid>
-        </div>
+    <Tabs className="projectsNav" activeKey={activeTab} onSelect={(key) => setActiveTab(key)}>
+    <Tab eventKey="DataAnalytics" title="Data Analytics" className="navTabs">
+        <DataAnalytics />
+    </Tab>
+    <Tab eventKey="NLP" title="Natural Language Processing" className="navTabs">
+        <NLP />
+    </Tab>
+    <Tab eventKey="ML" title="Machine Learning" className="navTabs">
+        <ML />
+    </Tab>
+    <Tab eventKey="ComputerVision" title="Computer Vision" className="navTabs">
+        <ComputerVision />
+    </Tab>
+    <Tab eventKey="ReactProjects" title="React Projects" className="navTabs">
+        <ReactProjects />
+    </Tab>
+    <Tab>
+        <Curriculum />
+    </Tab>
+  </Tabs>
+  
     )
-  }
 }
+
+export default Projects;
 

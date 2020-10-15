@@ -13,9 +13,9 @@ export default class ImageModal extends React.Component {
     render() {
         return (
             <div>
-              <div className="combo">
-                <img className="marker" src={marker} alt="scribbles behind smaller image"/>
-                <img className="small" src={wordcloud} onClick={this.handleShowDialog} alt="smaller wordcloud of JMK"/>
+              <div className="mycombo">
+                <img className="mymarker" src={marker} alt="scribbles behind smaller image"/>
+                <img className="mysmall" src={wordcloud} onClick={this.handleShowDialog} alt="smaller wordcloud of JMK"/>
               </div>
               {this.state.isOpen && (
                 <dialog

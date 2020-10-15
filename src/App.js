@@ -2,6 +2,8 @@ import React from "react";
 import "./App.scss";
 import Header from "./components/header_parts/Header"
 import Home from './components/Home'
+import Projects from './components/projects/Projects'
+import About from './components/About'
 import Engineering from './components/preview_skills/Engineering'
 import DataScience from './components/preview_skills/DataScience'
 import Automation from './components/preview_skills/Automation'
@@ -17,8 +19,8 @@ function App() {
         </div>
           <Switch>
                   <Route exact path="/" component={Home} />
-                  <Route exact path="/opportunities" component={Opportunities} />
-                  <Route exact path="/solutions" component={Solutions} />
+                  <Route exact path="/Projects" component={Projects} />
+                  <Route exact path="/About" component={About} />
                   <Route exact path="/contact-us" component={Contact} />
                   <Route exact path="/software_engineering" component={Engineering} />
                   <Route exact path="/datascience" component={DataScience} />
