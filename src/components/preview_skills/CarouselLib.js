@@ -88,6 +88,15 @@ export default class Responsive extends Component {
           <div>
           <span className="iconify" data-icon={this.props.item8} data-inline="false"style={{width:"100px", height:"100px"}}></span>
           </div>
+          <div>
+          <span className="iconify" data-icon={this.props.item10} data-inline="false"style={{width:"100px", height:"100px"}}></span>
+          </div>
+          <div>
+          <span className="iconify" data-icon={this.props.item11} data-inline="false"style={{width:"100px", height:"100px"}}></span>
+          </div>
+          <div>
+          <span className="iconify" data-icon={this.props.item12} data-inline="false"style={{width:"100px", height:"100px"}}></span>
+          </div>
           <div style={{height:"100px", width:"100px"}}>
           {this.props.itemIMG}
           </div>

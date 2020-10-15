@@ -96,6 +96,9 @@ const Engineering= ()=>{
                              item7={"vscode-icons:file-type-html"}
                              item8={"logos:sass"}           
                              item9= {"logos:es6"}    
+                             item10={"logos:flask"}
+                             item11={"logos:django"}
+                             item12={"logos:python"}
                 />
         </div>
 

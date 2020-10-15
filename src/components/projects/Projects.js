@@ -4,6 +4,7 @@ import NLP from './NLP'
 import ML from './ML'
 import ComputerVision from './ComputerVision'
 import ReactProjects from './ReactProjects'
+import Curriculum from './Curriculum'
 
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
@@ -30,7 +31,7 @@ const Projects= ()=>{
     <Tab eventKey="ReactProjects" title="React Projects" className="navTabs">
         <ReactProjects />
     </Tab>
-    <Tab>
+    <Tab eventKey="Curriculum" title="Curriculum" className="navTabs">
         <Curriculum />
     </Tab>
   </Tabs>

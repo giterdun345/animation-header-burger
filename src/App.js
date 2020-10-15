@@ -6,7 +6,6 @@ import Projects from './components/projects/Projects'
 import About from './components/About'
 import Engineering from './components/preview_skills/Engineering'
 import DataScience from './components/preview_skills/DataScience'
-import Automation from './components/preview_skills/Automation'
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
@@ -24,7 +23,6 @@ function App() {
                   <Route exact path="/contact-us" component={Contact} />
                   <Route exact path="/software_engineering" component={Engineering} />
                   <Route exact path="/datascience" component={DataScience} />
-                  <Route exact path="/automation" component={Automation} />
           </Switch>       
       </div>
     </Router>

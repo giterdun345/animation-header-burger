@@ -35,3 +35,5 @@ const Curriculum= ()=> {
         </div>
     )
 }
+
+export default Curriculum;
