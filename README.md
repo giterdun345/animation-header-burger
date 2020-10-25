@@ -1,3 +1,2 @@
-# animation-header-burger
-A large hamburger menu in header with home page and links to other pages that is animated and responsive.
-Start of profile homepage in React.
+# Portfolio website 
+This is an updated version of my portfolio website with React that has added animations, a novel hamburger menu and some additional infor here and there. This is deployed on Hostinger @ kettereronline.tech.
